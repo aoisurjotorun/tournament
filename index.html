@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>লগিন পেজ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        h1 {
+            font-size: 1.5em;
+            color: #4CAF50;
+            padding: 10px;
+        }
+        h2 {
+            font-size: 1em;
+            color: #333;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            position: relative;
+            margin-top: 20px;
+        }
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            object-fit: cover;
+            opacity: 0.1; /* Change this value to adjust opacity */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="football.jpg" alt="ছবির বিবরণ" class="background-image">
+        <h1>আ-ঐ সূর্য তরুন ফুটবল একাদশ</h1>
+        <h2>সুধী, <br>
+        সকল ফুটবল প্রেমি ভাইদের অভগতির জন্য জানানো যাচ্ছে যে, আগামী ০১/০২/২০২৫ ইং রোজ শনিবার বড় বার ফুটবল টুর্নামেন্ট অনুষ্ঠিত হতে যাচ্ছে।<br>
+        উক্ত টুর্নামেন্ট অংশগ্রহন কামনা করছি।</h2>
+        <a href="home.html" class="button">লগিন</a>
+    </div>
+</body>
+</html>

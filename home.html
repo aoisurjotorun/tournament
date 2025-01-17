@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            width: 80%;
+            max-width: 500px;
+        }
+        .button {
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>প্রয়োজনে</h1>
+    <div class="grid-container">
+        <a href="form.html" class="button">আবেদন</a>
+        <a href="#" class="button">পরিচালক</a>
+        <a href="#" class="button">নিয়মাবলি</a>
+        <a href="#" class="button">ক্যালেন্ডার</a>
+        <a href="#" class="button">কমিটীগন</a>
+        <a href="#" class="button">পেমেন্ট</a>
+    </div>
+</body>
+</html>
