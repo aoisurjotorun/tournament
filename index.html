@@ -27,10 +27,21 @@
             padding: 20px; /* Add padding for better spacing */
             box-sizing: border-box; /* Ensure padding is included in the total width and height */
         }
+        .circular-image {
+            width: 100px; /* Adjust size as needed */
+            height: 100px; /* Adjust size as needed */
+            border-radius: 50%; /* Makes the image circular */
+            object-fit: cover;
+            margin-bottom: 20px; /* Adds space below the image */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increase shadow size and intensity */
+        }
         h1 {
             font-size: 1.5em;
-            color: #4CAF50;
+            color: black; /* Change text color to black */
             padding: 10px;
+            background-color: #ffcc00; /* Add background color */
+            width: 100%; /* Make background stretch full width */
+            text-align: center; /* Center text */
         }
         h2 {
             font-size: 1.5em; /* Increase font size */
@@ -41,8 +52,8 @@
         }
         .button {
             display: inline-block;
-            padding: 10px 20px;
-            font-size: 1em;
+            padding: 20px 40px; /* Increase padding for an even larger button */
+            font-size: 1.5em; /* Increase font size */
             color: white;
             background-color: #4CAF50;
             border: none;
@@ -69,20 +80,20 @@
                 font-size: 1.2em; /* Adjust font size for smaller screens */
             }
             .button {
-                padding: 8px 16px;
-                font-size: 0.9em;
+                padding: 15px 30px; /* Adjust padding for smaller screens */
+                font-size: 1.2em; /* Adjust font size for smaller screens */
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="logo.jpg" alt="ছবির বিবরণ" class="background-image">
+        <img src="logo.jpg" alt="ছবির বিবরণ" class="circular-image">
         <h1>আ-ঐ সূর্য তরুন ফুটবল একাদশ</h1>
         <h2>সুধী, <br>
         সকল ফুটবল প্রেমি ভাইদের অভগতির জন্য জানানো যাচ্ছে যে,আ-ঐ সূর্য তরুন ফুটবল একাদশ এর উদ্যেগে ফুটবল টুর্নামেন্ট অনুষ্ঠিত হতে যাচ্ছে।<br>
         উক্ত টুর্নামেন্ট অংশগ্রহন করার জন্য নিচের বাটোনে কিল্ক করুন।</h2>
-        <a href="home.html" class="button">কিল্ক করুন</a>
+        <a href="home.html" class="button">ক্লিক করুন</a>
     </div>
 </body>
 </html>
