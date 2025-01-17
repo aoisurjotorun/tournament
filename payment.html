@@ -100,8 +100,8 @@
                 if (file) {
                     var reader = new FileReader();
                     reader.onloadend = function() {
-                        var base64data = reader.result;
-                        var url = `https://wa.me/+8801837261524?text=${encodeURIComponent('Please find the attached photo.')}&media=${encodeURIComponent(base64data)}`;
+                        var base64data = reader.result.split(',')[1];
+                        var url = `https://wa.me/+8801837261524?text=Please%20find%20the%20attached%20photo.%0A%0A[Download%20Image](data:image/jpeg;base64,${base64data})`;
                         window.open(url, '_blank');
                     };
                     reader.readAsDataURL(file);
