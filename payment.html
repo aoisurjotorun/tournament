@@ -87,23 +87,24 @@
             <p><a href="tel:01837261524" class="call-number">01837261524</a></p>
         </div>
 
-        <button class="upload-btn" onclick="uploadPhoto()">স্কিন শট জমা দিন</button>
+        <button class="upload-btn" onclick="uploadPhoto()">ছবি জমা দিন</button>
     </div>
 
     <script>
         function uploadPhoto() {
-            // এই ফাংশনে ছবির ফাইল আপলোডের অপশন দেখানো হবে
             var fileInput = document.createElement('input');
             fileInput.type = 'file';
             fileInput.accept = 'image/*';
             fileInput.onchange = function(event) {
                 var file = event.target.files[0];
                 if (file) {
-                    var formData = new FormData();
-                    formData.append('photo', file);
-
-                    // এখানে WhatsApp নম্বরে ছবিটি পাঠানোর প্রক্রিয়া যোগ করুন
-                    window.location.href = 'https://wa.me/+8801837261524?text=Please%20find%20the%20attached%20photo.';
+                    var reader = new FileReader();
+                    reader.onloadend = function() {
+                        var base64data = reader.result;
+                        var url = `https://wa.me/+8801837261524?text=${encodeURIComponent('Please find the attached photo.')}&media=${encodeURIComponent(base64data)}`;
+                        window.open(url, '_blank');
+                    };
+                    reader.readAsDataURL(file);
                 }
             };
             fileInput.click();
