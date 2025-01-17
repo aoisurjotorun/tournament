@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Tournament Bracket</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .match-box {
+            width: 40%;
+            border: 1px solid #ddd;
+            margin: 5px;
+            padding: 10px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+        .match-box h3 {
+            margin-bottom: 10px;
+        }
+        .winner {
+            font-weight: bold;
+            color: green;
+        }
+        .round-title {
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>খেলার ক্রম </h1>
+    
+    <div class="container">
+        <!-- Round of 16 -->
+        <div class="round-title">নক আউট ম্যাচ</div>
+        <div class="match-box">
+            <h3>Match 1</h3>
+            <div>Team 1 vs Team 2</div>
+            <div class="winner">Winner: Team 1</div>
+        </div>
+        <div class="match-box">
+            <h3>Match 2</h3>
+            <div>Team 3 vs Team 4</div>
+            <div class="winner">Winner: Team 4</div>
+        </div>
+        <div class="match-box">
+            <h3>Match 3</h3>
+            <div>Team 5 vs Team 6</div>
+            <div class="winner">Winner: Team 5</div>
+        </div>
+        <div class="match-box">
+            <h3>Match 4</h3>
+            <div>Team 7 vs Team 8</div>
+            <div class="winner">Winner: Team 8</div>
+        </div>
+        <div class="match-box">
+            <h3>Match 5</h3>
+            <div>Team 9 vs Team 10</div>
+            <div class="winner">Winner: Team 9</div>
+        </div>
+        <div class="match-box">
+            <h3>Match 6</h3>
+            <div>Team 11 vs Team 12</div>
+            <div class="winner">Winner: Team 11</div>
+        </div>
+        <div class="match-box">
+            <h3>Match 7</h3>
+            <div>Team 13 vs Team 14</div>
+            <div class="winner">Winner: Team 13</div>
+        </div>
+        <div class="match-box">
+            <h3>Match 8</h3>
+            <div>Team 15 vs Team 16</div>
+            <div class="winner">Winner: Team 15</div>
+        </div>
+        
+        <!-- Quarterfinals -->
+        <div class="round-title">Quarterfinals</div>
+        <div class="match-box">
+            <h3>Match 9</h3>
+            <div>Winner Match 1 vs Winner Match 2</div>
+            <div class="winner">Winner: Team 1</div>
+        </div>
+        <div class="match-box">
+            <h3>Match 10</h3>
+            <div>Winner Match 3 vs Winner Match 4</div>
+            <div class="winner">Winner: Team 8</div>
+        </div>
+        <div class="match-box">
+            <h3>Match 11</h3>
+            <div>Winner Match 5 vs Winner Match 6</div>
+            <div class="winner">Winner: Team 9</div>
+        </div>
+        <div class="match-box">
+            <h3>Match 12</h3>
+            <div>Winner Match 7 vs Winner Match 8</div>
+            <div class="winner">Winner: Team 15</div>
+        </div>
+        
+        <!-- Semifinals -->
+        <div class="round-title">Semifinals</div>
+        <div class="match-box">
+            <h3>Match 13</h3>
+            <div>Winner Match 9 vs Winner Match 10</div>
+            <div class="winner">Winner: Team 1</div>
+        </div>
+        <div class="match-box">
+            <h3>Match 14</h3>
+            <div>Winner Match 11 vs Winner Match 12</div>
+            <div class="winner">Winner: Team 15</div>
+        </div>
+        
+        <!-- Final -->
+        <div class="round-title">Final</div>
+        <div class="match-box">
+            <h3>Final</h3>
+            <div>Winner Match 13 vs Winner Match 14</div>
+            <div class="winner">Winner: Team 1</div>
+        </div>
+    </div>
+</body>
+</html>
