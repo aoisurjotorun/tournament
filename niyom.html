@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>নিয়ম</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+            -webkit-user-select: none; /* Prevent selecting text in Safari */
+            -moz-user-select: none; /* Prevent selecting text in Firefox */
+            -ms-user-select: none; /* Prevent selecting text in IE */
+            user-select: none; /* Prevent selecting text in standard browsers */
+            overflow: auto; /* Enable scrolling */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px; /* ব্লকের মাঝে ফাঁকা */
+            padding: 20px;
+            position: relative; /* For positioning child elements */
+        }
+
+        .info-box {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9); /* Background color with opacity */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* shadow */
+            width: 90%; /* প্রস্থ নির্ধারণ */
+            max-width: 500px; /* সর্বোচ্চ প্রস্থ নির্ধারণ */
+            position: relative; /* For stacking context */
+            background-image: url('turistcss.jpg'); /* Background image */
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay; /* Blend mode for opacity */
+        }
+
+        .info-box p {
+            font-weight: bold; /* Make text bold */
+        }
+
+        .call-number {
+            color: #007bff; /* নীল টেক্সট */
+            text-decoration: underline; /* টেক্সটের নিচে রেখা */
+            cursor: pointer; /* ক্লিকযোগ্য */
+        }
+
+        .back-btn {
+            margin-top: 20px;
+            background-color: #007bff; /* নীল ব্যাকগ্রাউন্ড */
+            color: white; /* সাদা টেক্সট */
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .back-btn:hover {
+            background-color: #0056b3; /* হোভার অবস্থানে গাঢ় নীল */
+        }
+
+        .no-results {
+            display: none; /* প্রাথমিকভাবে লুকানো */
+            font-size: 18px;
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p id="noResults" class="no-results">কোনো ফলাফল খুঁজে পাওয়া যায়নি</p>
+        
+        <!-- প্রথম ব্লক -->
+        <div class="info-box" data-location="মৌলভীবাজার">
+            <p>১/ নক আউট ভিত্তিক খেলা অনুষ্ঠিত হবে।
+</p>
+			<p>২/ প্রতি দলে ১১ জন খেলোয়ার থাকবে।
+</p>
+            <p>৩/ অতিরিক্ত ০৬ জন খেলোয়ার নিয়ে আসতে হবে।
+</p>
+            <p>৪/ খেলায় অংশগ্রহন করার জন্য প্রথম ৫০০ টাকা পরিশোধ করতে হবে।
+</p>
+            <p>৫/প্রত্যেক দলকে জার্সি ও বল নিয়ে আসতে হবে।
+
+</p>
+            <p>৬/ খেলার মাঠে রেফারির সিদ্ধান্ত চুড়ান্ত সিদ্ধান্ত বলে গন্য করা হবে।
+</p>
+            <p>৭/ যে কোনো বিষয়ে কমিটির সিদ্ধান্ত চূড়ান্ত সিদ্ধান্ত বলে গণ্য হবে।
+
+</p>
+            <p>৮/ খেলা শুরু হবে প্রতিদিন দুপুর ৩ টায়।
+</p>
+            <p>৯/ প্রতিটি দলকে ১ ঘন্টা আগে উপস্থিত হতে হবে।
+</p>
+            <p>১০/ এক দলের খেলোয়াড় অন্য দলে খেলতে পারবে ২০০/= টাকা জরিমানা দিয়ে।
+</p>
+            <p>১১/ খেলাধুলায় যে দল বিশৃঙ্খলা সৃষ্টি করবে তাদের টিম বাতিল করা হবে।
+</p>
+            <p>১২/ জার্সি ও বল না আনলে জরিমানা ২০০/= টাকা দিতে হবে।
+</p>
+
+        </div>
+    </div>
+</body>
+</html>
