@@ -15,7 +15,10 @@
             -moz-user-select: none; /* Prevent selecting text in Firefox */
             -ms-user-select: none; /* Prevent selecting text in IE */
             user-select: none; /* Prevent selecting text in standard browsers */
-            overflow: auto; /* Enable scrolling */
+            overflow: hidden; /* Disable scrolling */
+            position: fixed; /* Prevent scrolling */
+            width: 100%;
+            height: 100%;
         }
 
         .container {
