@@ -2,128 +2,112 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Football Tournament Bracket</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>পেমেন্ট</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            overflow: auto;
+        }
+
         .container {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            position: relative;
         }
-        .match-box {
-            width: 40%;
-            border: 1px solid #ddd;
-            margin: 5px;
-            padding: 10px;
-            text-align: center;
-            background-color: #f9f9f9;
+
+        .info-box {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+            background-image: url('turistcss.jpg');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
         }
-        .match-box h3 {
-            margin-bottom: 10px;
-        }
-        .winner {
+
+        .info-box p {
             font-weight: bold;
-            color: green;
         }
-        .round-title {
-            width: 100%;
-            text-align: center;
+
+        .call-number {
+            color: #007bff;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .upload-btn {
             margin-top: 20px;
-            font-size: 1.5em;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .upload-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .no-results {
+            display: none;
+            font-size: 18px;
+            color: red;
             font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <h1>খেলার ক্রম </h1>
-    
     <div class="container">
-        <!-- Round of 16 -->
-        <div class="round-title">নক আউট ম্যাচ</div>
-        <div class="match-box">
-            <h3>Match 1</h3>
-            <div>Team 1 vs Team 2</div>
-            <div class="winner">Winner: Team 1</div>
+        <p id="noResults" class="no-results">কোনো ফলাফল খুঁজে পাওয়া যায়নি</p>
+
+        <div class="info-box" data-location="মৌলভীবাজার">
+            <p>বিকাশ</p>
+            <p><a href="tel:01766222732" class="call-number">01766222732</a></p>
         </div>
-        <div class="match-box">
-            <h3>Match 2</h3>
-            <div>Team 3 vs Team 4</div>
-            <div class="winner">Winner: Team 4</div>
+        <div class="info-box" data-location="মৌলভীবাজার">
+            <p>নগদ</p>
+            <p><a href="tel:01837261524" class="call-number">01837261524</a></p>
         </div>
-        <div class="match-box">
-            <h3>Match 3</h3>
-            <div>Team 5 vs Team 6</div>
-            <div class="winner">Winner: Team 5</div>
-        </div>
-        <div class="match-box">
-            <h3>Match 4</h3>
-            <div>Team 7 vs Team 8</div>
-            <div class="winner">Winner: Team 8</div>
-        </div>
-        <div class="match-box">
-            <h3>Match 5</h3>
-            <div>Team 9 vs Team 10</div>
-            <div class="winner">Winner: Team 9</div>
-        </div>
-        <div class="match-box">
-            <h3>Match 6</h3>
-            <div>Team 11 vs Team 12</div>
-            <div class="winner">Winner: Team 11</div>
-        </div>
-        <div class="match-box">
-            <h3>Match 7</h3>
-            <div>Team 13 vs Team 14</div>
-            <div class="winner">Winner: Team 13</div>
-        </div>
-        <div class="match-box">
-            <h3>Match 8</h3>
-            <div>Team 15 vs Team 16</div>
-            <div class="winner">Winner: Team 15</div>
-        </div>
-        
-        <!-- Quarterfinals -->
-        <div class="round-title">Quarterfinals</div>
-        <div class="match-box">
-            <h3>Match 9</h3>
-            <div>Winner Match 1 vs Winner Match 2</div>
-            <div class="winner">Winner: Team 1</div>
-        </div>
-        <div class="match-box">
-            <h3>Match 10</h3>
-            <div>Winner Match 3 vs Winner Match 4</div>
-            <div class="winner">Winner: Team 8</div>
-        </div>
-        <div class="match-box">
-            <h3>Match 11</h3>
-            <div>Winner Match 5 vs Winner Match 6</div>
-            <div class="winner">Winner: Team 9</div>
-        </div>
-        <div class="match-box">
-            <h3>Match 12</h3>
-            <div>Winner Match 7 vs Winner Match 8</div>
-            <div class="winner">Winner: Team 15</div>
-        </div>
-        
-        <!-- Semifinals -->
-        <div class="round-title">Semifinals</div>
-        <div class="match-box">
-            <h3>Match 13</h3>
-            <div>Winner Match 9 vs Winner Match 10</div>
-            <div class="winner">Winner: Team 1</div>
-        </div>
-        <div class="match-box">
-            <h3>Match 14</h3>
-            <div>Winner Match 11 vs Winner Match 12</div>
-            <div class="winner">Winner: Team 15</div>
-        </div>
-        
-        <!-- Final -->
-        <div class="round-title">Final</div>
-        <div class="match-box">
-            <h3>Final</h3>
-            <div>Winner Match 13 vs Winner Match 14</div>
-            <div class="winner">Winner: Team 1</div>
-        </div>
+
+        <button class="upload-btn" onclick="uploadPhoto()">স্কিন শট জমা দিন</button>
     </div>
+
+    <script>
+        function uploadPhoto() {
+            // এই ফাংশনে ছবির ফাইল আপলোডের অপশন দেখানো হবে
+            var fileInput = document.createElement('input');
+            fileInput.type = 'file';
+            fileInput.accept = 'image/*';
+            fileInput.onchange = function(event) {
+                var file = event.target.files[0];
+                if (file) {
+                    var formData = new FormData();
+                    formData.append('photo', file);
+
+                    // এখানে WhatsApp নম্বরে ছবিটি পাঠানোর প্রক্রিয়া যোগ করুন
+                    window.location.href = 'https://wa.me/+8801837261524?text=Please%20find%20the%20attached%20photo.';
+                }
+            };
+            fileInput.click();
+        }
+    </script>
 </body>
 </html>
