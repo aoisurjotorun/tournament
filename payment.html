@@ -11,50 +11,50 @@
             padding: 0;
             background-color: #f4f4f4;
             text-align: center;
-            -webkit-user-select: none; /* Prevent selecting text in Safari */
-            -moz-user-select: none; /* Prevent selecting text in Firefox */
-            -ms-user-select: none; /* Prevent selecting text in IE */
-            user-select: none; /* Prevent selecting text in standard browsers */
-            overflow: auto; /* Enable scrolling */
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            overflow: auto;
         }
 
         .container {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 20px; /* ব্লকের মাঝে ফাঁকা */
+            gap: 20px;
             padding: 20px;
-            position: relative; /* For positioning child elements */
+            position: relative;
         }
 
         .info-box {
             padding: 20px;
-            background: rgba(255, 255, 255, 0.9); /* Background color with opacity */
+            background: rgba(255, 255, 255, 0.9);
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* shadow */
-            width: 90%; /* প্রস্থ নির্ধারণ */
-            max-width: 500px; /* সর্বোচ্চ প্রস্থ নির্ধারণ */
-            position: relative; /* For stacking context */
-            background-image: url('turistcss.jpg'); /* Background image */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+            background-image: url('turistcss.jpg');
             background-size: cover;
             background-position: center;
-            background-blend-mode: overlay; /* Blend mode for opacity */
+            background-blend-mode: overlay;
         }
 
         .info-box p {
-            font-weight: bold; /* Make text bold */
+            font-weight: bold;
         }
 
         .call-number {
-            color: #007bff; /* নীল টেক্সট */
-            text-decoration: underline; /* টেক্সটের নিচে রেখা */
-            cursor: pointer; /* ক্লিকযোগ্য */
+            color: #007bff;
+            text-decoration: underline;
+            cursor: pointer;
         }
 
-        .back-btn {
+        .upload-btn {
             margin-top: 20px;
-            background-color: #007bff; /* নীল ব্যাকগ্রাউন্ড */
-            color: white; /* সাদা টেক্সট */
+            background-color: #007bff;
+            color: white;
             padding: 10px 15px;
             border: none;
             border-radius: 5px;
@@ -62,12 +62,12 @@
             font-size: 16px;
         }
 
-        .back-btn:hover {
-            background-color: #0056b3; /* হোভার অবস্থানে গাঢ় নীল */
+        .upload-btn:hover {
+            background-color: #0056b3;
         }
 
         .no-results {
-            display: none; /* প্রাথমিকভাবে লুকানো */
+            display: none;
             font-size: 18px;
             color: red;
             font-weight: bold;
@@ -77,17 +77,37 @@
 <body>
     <div class="container">
         <p id="noResults" class="no-results">কোনো ফলাফল খুঁজে পাওয়া যায়নি</p>
-        
-        <!-- প্রথম ব্লক -->
+
         <div class="info-box" data-location="মৌলভীবাজার">
             <p>বিকাশ</p>
             <p><a href="tel:01766222732" class="call-number">01766222732</a></p>
         </div>
-        <!-- দ্বিতীয় ব্লক -->
         <div class="info-box" data-location="মৌলভীবাজার">
-            <p>নগদ</p>            
-			<p><a href="tel:01837261524" class="call-number">01837261524</a></p>
+            <p>নগদ</p>
+            <p><a href="tel:01837261524" class="call-number">01837261524</a></p>
         </div>
+
+        <button class="upload-btn" onclick="uploadPhoto()">স্কিন শট জমা দিন</button>
     </div>
+
+    <script>
+        function uploadPhoto() {
+            // এই ফাংশনে ছবির ফাইল আপলোডের অপশন দেখানো হবে
+            var fileInput = document.createElement('input');
+            fileInput.type = 'file';
+            fileInput.accept = 'image/*';
+            fileInput.onchange = function(event) {
+                var file = event.target.files[0];
+                if (file) {
+                    var formData = new FormData();
+                    formData.append('photo', file);
+
+                    // এখানে WhatsApp নম্বরে ছবিটি পাঠানোর প্রক্রিয়া যোগ করুন
+                    window.location.href = 'https://wa.me/+8801837261524?text=Please%20find%20the%20attached%20photo.';
+                }
+            };
+            fileInput.click();
+        }
+    </script>
 </body>
 </html>
